@@ -1,0 +1,35 @@
+[GET] /captcha/general
+
+petunjuk : setelah di fetch maka akan mendapatkan respopnse numberOne dan numberTwo, simpan value nya
+lalu fetch post
+
+[POST] /captcha/post/general
+
+petunjuk: property post adalah answer,numberOne,numberTwo
+POST numberOne dan numberTwo dengan value hasil fetch GET diatas, 
+property answer adalah input value captcha user
+
+
+{User API}
+disesuaikan input dengan type masing-masing dan properti yang dikirim 
+
+[POST] api/signup/elearning
+BODY: {name,email,pw,birth}
+response: {message} //harus redirect ke halaman login
+
+
+[POST] api/login/elearning
+BODY: {username,pw,confirmpw,captcha}
+response: {message,confirmMessage,captchaMessage}
+
+confirmMessage akan bernilai false ketika inputan password tidak sama antar keduanya,
+captchaMessage akan bernilai false ketika inputan captcha tidak valid, ketika semua tidak valid maka auto refresh halaman
+
+
+
+
+
+
+
+
+
